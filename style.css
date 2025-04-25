@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #00d9ff, #00b4ff, #1c1c1c);
+    color: #f0f0f0;
+    line-height: 1.6;
+    background-attachment: fixed; /* Makes the background fixed during scroll */
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+nav {
+    background-color: rgba(28, 28, 28, 0.85); /* Semi-transparent background */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Applies a blur effect to the background behind the navbar */
+}
+
+nav h1 {
+    float: left;
+    color: #FF8C00; /* Changed to orange */
+    font-weight: 600;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 2.5rem; /* Increased size for better visibility */
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Increased spacing for better aesthetics */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative; /* Allows for a pseudo-element for hover effect */
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+nav ul li a:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff4081;
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Create an underline effect */
+}
+
+.section h2 {
+    color: #FF8C00; /* Changed to orange for section headings */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #00d9ff; /* Added a border for emphasis */
+    padding-bottom: 0.5rem; /* Spacing between the text and the border */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem 0; /* Added padding for spacing */
+}
+
+.profile-img {
+    max-width: 220px;
+    border-radius: 50%;
+    border: 4px solid #ff4081; /* Updated border color to match the theme */
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.5); /* Soft shadow */
+}
+
+.profile-info {
+    flex: 1;
+    font-size: 1.2rem; /* Increased font size for better readability */
+}
+
+.social-links a {
+    color: #FF8C00; /* Changed to orange for social links */
+    font-size: 1.8rem; /* Increased icon size */
+    margin-right: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.3); /* Increased scaling on hover */
+}
+
+.skills-container, .hobby-list, .projects-container, .achievements-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem; /* Increased gap for better spacing */
+    padding-top: 1rem;
+}
+
+.skill, .hobby-card, .project, .achievement {
+    background: rgba(28, 28, 28, 0.9); /* Slightly transparent for depth */
+    padding: 1.5rem; /* Adjusted padding */
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.3); /* Emphasized shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for shadow as well */
+}
+
+.skill:hover, .hobby-card:hover, .project:hover, .achievement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 64, 129, 0.5); /* Deep shadow effect on hover */
+}
+
+.certificate-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    border: 2px solid #00d9ff; /* Border for certificates */
+}
+
+button.read-more {
+    background: linear-gradient(to right, #ff4081, #ff79c0); /* Gradient button background */
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem; /* Increased padding */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transitions */
+}
+
+button.read-more:hover {
+    background: linear-gradient(to right, #ff79c0, #ff4081); /* Hover effect with reversed gradient */
+    transform: scale(1.05); /* Slight scaling on hover */
+    box-shadow: 0 0 15px rgba(255, 64, 129, 0.6); /* Enhanced shadow on hover */
+}
+
+.academic-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(28, 28, 28, 0.9); /* Matching background */
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.academic-table th, .academic-table td {
+    padding: 1.2rem; /* Adjusted padding */
+    border: 1px solid #444; /* Darker border for definition */
+    text-align: left;
+}
+
+.academic-table th {
+    background: #00d9ff;
+    color: #000;
+    font-weight: 600; /* Bolder text for headers */
+}
+
+.academic-table td {
+    color: #fff;
+}
+
+#contact {
+    text-align: center;
+    padding: 2rem 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blurred background for depth */
+}
+
+#contact a {
+    color: #FF8C00; /* Orange for contact links */
+    text-decoration: none;
+    font-weight: bold; /* Make links bolder */
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #D2691E; /* Lighter hover color */
+}
